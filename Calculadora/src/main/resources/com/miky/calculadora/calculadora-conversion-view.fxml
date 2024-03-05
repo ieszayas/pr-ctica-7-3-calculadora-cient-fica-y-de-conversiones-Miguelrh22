@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="calculadora" prefHeight="771.0" prefWidth="517.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miky.calculadora.CalculadoraConversionController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="517.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onCerrar" text="Cerrar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Calculadoras">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onNormal" text="Normal" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCientifica" text="Cientifica" />
+                  <MenuItem mnemonicParsing="false" onAction="#onConversiones" text="Conversiones" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMonedas" text="Monedas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onInfo" text="Información" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label id="titulo" layoutX="103.0" layoutY="45.0" text="MikyMath Conversion">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label id="calcDisplay" fx:id="pantalla" layoutX="20.0" layoutY="110.0" prefHeight="73.0" prefWidth="223.0">
+         <font>
+            <Font name="System Bold" size="80.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER" hgap="8.0" layoutX="59.0" layoutY="357.0" prefHeight="400.0" prefWidth="400.0" vgap="8.0">
+        <columnConstraints>
+            <ColumnConstraints fillWidth="false" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="false" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="4" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="1" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="8" GridPane.columnIndex="1">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="9" GridPane.columnIndex="2">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNumeroPressed" prefHeight="100.0" prefWidth="196.0" text="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onResetPressed" prefHeight="196.0" prefWidth="100.0" stylesheets="@style.css" text="C" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2147483647">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnMisc" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onDecimalChange" prefHeight="100.0" prefWidth="100.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnNumerico" />
+               </styleClass></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onDeleteChar" prefHeight="196.0" prefWidth="100.0" text="&lt;" GridPane.columnIndex="3" GridPane.rowSpan="2">
+               <styleClass>
+                  <String fx:value="btnCalculadora" />
+                  <String fx:value="btnMisc" />
+               </styleClass></Button>
+         </children>
+      </GridPane>
+      <ComboBox fx:id="tipo" layoutX="20.0" layoutY="238.0" prefHeight="30.0" prefWidth="152.0">
+         <styleClass>
+            <String fx:value="selectoresConversion" />
+            <String fx:value="convTipo" />
+         </styleClass>
+      </ComboBox>
+      <ComboBox fx:id="de" layoutX="199.0" layoutY="238.0" prefHeight="25.0" prefWidth="120.0">
+         <styleClass>
+            <String fx:value="selectoresConversion" />
+            <String fx:value="convDe" />
+         </styleClass>
+      </ComboBox>
+      <ComboBox fx:id="a" layoutX="373.0" layoutY="238.0" prefHeight="25.0" prefWidth="120.0">
+         <styleClass>
+            <String fx:value="selectoresConversion" />
+            <String fx:value="convA" />
+         </styleClass>
+      </ComboBox>
+      <Label id="calcDisplay" fx:id="pantalla2" layoutX="270.0" layoutY="110.0" prefHeight="73.0" prefWidth="223.0">
+         <font>
+            <Font name="System Bold" size="80.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

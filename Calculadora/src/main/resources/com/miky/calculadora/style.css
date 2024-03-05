@@ -24,11 +24,37 @@
     -fx-text-fill: black;
 }
 
+.btnCientifica {
+    -fx-background-color: #196F3D;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
 .btnMisc {
     -fx-background-color: #666666;
     -fx-text-fill: black;
     -fx-font-weight: bold;
 }
+
+
+.selectoresConversion {
+    -fx-border-radius: 5;
+    -fx-font-size: 14;
+    -fx-text-fill: black;
+}
+
+.convTipo {
+    -fx-background-color: #A9DFBF;
+}
+
+.convDe {
+    -fx-background-color: #F5B041;
+}
+
+.convA {
+    -fx-background-color: #5DADE2;
+}
+
 
 #calcDisplay {
     -fx-font-size: 36px;

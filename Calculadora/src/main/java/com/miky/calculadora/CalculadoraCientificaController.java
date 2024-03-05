@@ -2,17 +2,10 @@ package com.miky.calculadora;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
-import java.io.IOException;
-
-public class CalculadoraController {
+public class CalculadoraCientificaController {
 
     @FXML
     private Label pantalla;
@@ -160,5 +153,52 @@ public class CalculadoraController {
     public void onNormal(ActionEvent actionEvent) {
         GestionVentanas.openNormal(actionEvent);
 
+    }
+
+    @FXML
+    public void onCos(ActionEvent actionEvent) {
+
+        if(!numero.isEmpty()) {
+            resultadoTemporal = MikyMath.cos(Double.parseDouble(numero));
+        }
+        numero = resultadoTemporal+"";
+        pantalla.setText(resultadoTemporal+"");
+    }
+
+    @FXML
+    public void onTan(ActionEvent actionEvent) {
+        if(!numero.isEmpty()) {
+            resultadoTemporal = MikyMath.tan(Double.parseDouble(numero));
+        }
+        numero = resultadoTemporal+"";
+        pantalla.setText(resultadoTemporal+"");
+    }
+
+    @FXML
+    public void onExp(ActionEvent actionEvent) {
+        if(!numero.isEmpty()) {
+            resultadoTemporal = MikyMath.exp(Double.parseDouble(numero));
+        }
+        numero = resultadoTemporal+"";
+        pantalla.setText(resultadoTemporal+"");
+    }
+
+    @FXML
+    public void onSin(ActionEvent actionEvent) {
+        if(!numero.isEmpty()) {
+            resultadoTemporal = MikyMath.sin(Double.parseDouble(numero));
+        }
+        numero = resultadoTemporal+"";
+        pantalla.setText(resultadoTemporal+"");
+    }
+
+    @FXML
+    public void onSqr(ActionEvent actionEvent) {
+
+        if(!numero.isEmpty()) {
+            resultadoTemporal = MikyMath.sqrt(Double.parseDouble(numero));
+        }
+        numero = resultadoTemporal+"";
+        pantalla.setText(resultadoTemporal+"");
     }
 }
