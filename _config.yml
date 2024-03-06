@@ -1,0 +1,5 @@
+theme: Calculadora
+title: MikyMath Calculator Page
+description: MikyMath incluye una calculadora normal, una calculadora cientifica y una de conversiones!
+plugins:
+- jekyll-seo-tag

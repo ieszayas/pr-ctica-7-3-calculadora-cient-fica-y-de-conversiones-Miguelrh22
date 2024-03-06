@@ -1,0 +1,74 @@
+.btnCalculadora {
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
+
+.btnNumerico {
+    -fx-background-color: #333333;
+    -fx-text-fill: white;
+}
+
+.btnMemoria {
+    -fx-background-color: #6666cc;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.btnOperador {
+    -fx-background-color: #ffcc66;
+    -fx-text-fill: black;
+}
+
+.btnCientifica {
+    -fx-background-color: #196F3D;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.btnMisc {
+    -fx-background-color: #666666;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+
+.selectoresConversion {
+    -fx-border-radius: 5;
+    -fx-font-size: 14;
+    -fx-text-fill: black;
+}
+
+.convTipo {
+    -fx-background-color: #A9DFBF;
+}
+
+.convDe {
+    -fx-background-color: #F5B041;
+}
+
+.convA {
+    -fx-background-color: #5DADE2;
+}
+
+
+#calcDisplay {
+    -fx-font-size: 36px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #606060;
+}
+
+#titulo {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#calculadora {
+    -fx-background-color: #101010;
+}
