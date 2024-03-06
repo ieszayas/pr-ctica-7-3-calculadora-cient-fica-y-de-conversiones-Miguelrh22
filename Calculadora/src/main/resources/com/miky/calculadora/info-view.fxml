@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="calculadora" prefHeight="300.0" prefWidth="420.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miky.calculadora.InfoController">
+   <children>
+      <Label id="titulo" layoutX="62.0" layoutY="45.0" text="MikyMath Calculator">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label id="titulo" layoutX="80.0" layoutY="125.0" text="Created by Miguel">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label id="titulo" layoutX="181.0" layoutY="212.0" text="v0.1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

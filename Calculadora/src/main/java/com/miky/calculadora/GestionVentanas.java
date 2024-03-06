@@ -16,18 +16,18 @@ import java.io.IOException;
 public class GestionVentanas {
 
 
-
+    /**
+     * Esta clase permite realizar el cambio de ventana entre calculadoras, a la normal.
+     * @param actionEvent
+     */
     public static void openNormal(ActionEvent actionEvent){
         try{
             MenuItem menuItem = (MenuItem) actionEvent.getSource();
 
-            // Obtén la referencia al ContextMenu asociado con el MenuItem
             ContextMenu contextMenu = menuItem.getParentPopup();
 
-            // Obtén la referencia al Owner Node (puede ser el contenido de la ventana)
             Node ownerNode = contextMenu.getOwnerNode();
 
-            // Obtén la referencia al Stage actual
             Stage currentStage = (Stage) ownerNode.getScene().getWindow();
 
             FXMLLoader loader = new FXMLLoader(GestionVentanas.class.getResource("calculadora-view.fxml"));
@@ -46,17 +46,15 @@ public class GestionVentanas {
         }
     }
 
+    /**
+     * Esta clase permite realizar el cambio de ventana entre calculadoras, a la cientifica.
+     * @param actionEvent
+     */
     public static void openCientifica(ActionEvent actionEvent){
         try{
             MenuItem menuItem = (MenuItem) actionEvent.getSource();
-
-            // Obtén la referencia al ContextMenu asociado con el MenuItem
             ContextMenu contextMenu = menuItem.getParentPopup();
-
-            // Obtén la referencia al Owner Node (puede ser el contenido de la ventana)
             Node ownerNode = contextMenu.getOwnerNode();
-
-            // Obtén la referencia al Stage actual
             Stage currentStage = (Stage) ownerNode.getScene().getWindow();
 
             FXMLLoader loader = new FXMLLoader(GestionVentanas.class.getResource("calculadora-cientifica-view.fxml"));
@@ -75,17 +73,15 @@ public class GestionVentanas {
         }
     }
 
+    /**
+     * Esta clase permite realizar el cambio de ventana entre calculadoras, a la de conversion.
+     * @param actionEvent
+     */
     public static void openConversion(ActionEvent actionEvent){
         try{
             MenuItem menuItem = (MenuItem) actionEvent.getSource();
-
-            // Obtén la referencia al ContextMenu asociado con el MenuItem
             ContextMenu contextMenu = menuItem.getParentPopup();
-
-            // Obtén la referencia al Owner Node (puede ser el contenido de la ventana)
             Node ownerNode = contextMenu.getOwnerNode();
-
-            // Obtén la referencia al Stage actual
             Stage currentStage = (Stage) ownerNode.getScene().getWindow();
 
             FXMLLoader loader = new FXMLLoader(GestionVentanas.class.getResource("calculadora-conversion-view.fxml"));
@@ -104,6 +100,10 @@ public class GestionVentanas {
         }
     }
 
+    /**
+     * Esta clase permite abir la ventana de cambio de monedas
+     * @param actionEvent
+     */
     public static void openMonedas(ActionEvent actionEvent){
         try{
 
@@ -126,31 +126,23 @@ public class GestionVentanas {
         }
     }
 
-
+    /**
+     * Esta clase permite abir la ventana de cambio de informacion
+     * @param actionEvent
+     */
     public static void openInfo(ActionEvent actionEvent){
         try{
-            MenuItem menuItem = (MenuItem) actionEvent.getSource();
-
-            // Obtén la referencia al ContextMenu asociado con el MenuItem
-            ContextMenu contextMenu = menuItem.getParentPopup();
-
-            // Obtén la referencia al Owner Node (puede ser el contenido de la ventana)
-            Node ownerNode = contextMenu.getOwnerNode();
-
-            // Obtén la referencia al Stage actual
-            Stage currentStage = (Stage) ownerNode.getScene().getWindow();
-
-            FXMLLoader loader = new FXMLLoader(GestionVentanas.class.getResource("calculadora-conversion-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(GestionVentanas.class.getResource("info-view.fxml"));
             Pane root = (Pane) loader.load();
 
             Scene scene = new Scene(root);
             Stage stageWindow = new Stage();
             stageWindow.getIcons().add(new Image(GestionVentanas.class.getResourceAsStream("icon.png")));
             stageWindow.setTitle(Macros.getAppName());
+            stageWindow.initModality(Modality.APPLICATION_MODAL);
             stageWindow.setScene(scene);
             stageWindow.show();
 
-            currentStage.close();
         } catch (IOException e){
 
         }
